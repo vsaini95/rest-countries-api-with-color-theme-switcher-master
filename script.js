@@ -203,7 +203,7 @@ inputBar.addEventListener("keyup", (e) => {
     } else {
       let noData = document.createElement("div");
       noData.classList.add("noData");
-      noData.innerHTML = `<div><h1>NO RESULTS</h1><p>We searched far and wide and couldn't find any files matching your search.</p></div>`;
+      noData.innerHTML = `<div><h1>NO RESULTS</h1><p>We searched far and wide and couldn't find any country matching your search.</p></div>`;
       cards.appendChild(noData);
       //alert("no data found");
     }
@@ -230,7 +230,7 @@ function constrained(filteredCountries) {
         //alert("no data found");
         let noData = document.createElement("div");
         noData.classList.add("noData");
-        noData.innerHTML = `<div><h1>NO RESULTS</h1><p>We searched far and wide and couldn't find any files matching your search.</p></div>`;
+        noData.innerHTML = `<div><h1>NO RESULTS</h1><p>We searched far and wide and couldn't find any country matching your search.</p></div>`;
         cards.appendChild(noData);
       }
     }
