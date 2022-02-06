@@ -29,6 +29,7 @@
   --box-shadow-color: #000;
   --hoverbg: hsl(0, 0%, 52%);
 }
+html,
 body {
   width: 100%;
   height: 100%;
@@ -79,10 +80,6 @@ body {
   display: flex;
   position: relative;
   height: 50px;
-}
-.inputBar label {
-  position: absolute;
-  visibility: hidden;
 }
 .inputBar .fa-search {
   position: absolute;
@@ -361,11 +358,10 @@ select:focus {
   }
 }
 .hide {
-  visibility: hidden;
   position: absolute;
+  top: 0;
+  display: none;
 }
-.view {
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-}
+/*.view {
+  width: 100vw;
+}*/

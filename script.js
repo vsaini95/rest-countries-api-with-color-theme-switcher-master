@@ -95,7 +95,7 @@ function deatiled(element) {
           const button = document.createElement("button");
           button.innerText = `${data.name}`;
           button.addEventListener("click", function () {
-            div.remove();
+            divs.remove();
             deatiled(data);
           });
 
@@ -108,9 +108,10 @@ function deatiled(element) {
     buttonDiv.appendChild(button);
   }
 
-  const div = document.createElement("div");
-  body.classList.add("view");
-  div.innerHTML = `<div class="details">
+  const divs = document.createElement("div");
+  //divs.classList.add("div");
+  //body.classList.add("view");
+  divs.innerHTML = `<div class="details">
     <div class="backBtn"><i class="fas fa-arrow-left"></i>
     <button class="back">Back</button></div>
     <div class="data">
@@ -135,24 +136,24 @@ function deatiled(element) {
         </div>
     </div>
 </div>`;
-  let borderDiv = div.childNodes[0].childNodes[3].childNodes[3].childNodes[5];
+  let borderDiv = divs.childNodes[0].childNodes[3].childNodes[3].childNodes[5];
   borderDiv.appendChild(buttonDiv);
 
-  wrapper.appendChild(div);
   bars.classList.add("hide");
   cards.classList.add("hide");
   //remove();
+  wrapper.appendChild(divs);
 
-  div.addEventListener("click", function (e) {
+  divs.addEventListener("click", function (e) {
     if (e.target.classList.contains("back")) {
       preload.classList.remove("hide");
-      div.remove();
+      divs.remove();
       bars.classList.remove("hide");
       setTimeout(() => {
-        // fill();
+        //fill();
         cards.classList.remove("hide");
         preload.classList.add("hide");
-        body.classList.remove("view");
+        //body.classList.remove("view");
       }, 1000);
     }
   });
@@ -175,26 +176,17 @@ function displayCards(element) {
   div.innerHTML = Cardreturn(element);
   cards.appendChild(div);
   div.addEventListener("click", function () {
-    if (region) {
-      //region.textContent = "Filter by Region";
-    }
     deatiled(element);
   });
 }
 
 /*-----------------------------------------searching-------------------------------*/
 inputBar.addEventListener("keyup", (e) => {
-  if (
-    e.target ||
-    e.key === "Backspace"
-    // region.textContent == "Filter by Region"
-  ) {
+  if (e.target || e.key === "Backspace") {
     const searchCountry = e.target.value.toLowerCase();
-    //console.log(searchCountry);
     let filteredCountries = user.filter((char) => {
       return char.name.toLowerCase().includes(searchCountry);
     });
-    //console.log(filteredCountries);
     remove();
     if (filteredCountries.length) {
       filteredCountries.forEach((elem) => {
