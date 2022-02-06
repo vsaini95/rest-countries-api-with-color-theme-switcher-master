@@ -1,0 +1,371 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+}
+.light {
+  --bodybg: hsl(0, 0%, 98%);
+  --inputholder: hsl(0, 0%, 52%);
+  --btnbg: #fff;
+  --textColor: hsl(200, 15%, 8%);
+  --box-shadow-offset-x: 0px;
+  --box-shadow-offset-y: 0px;
+  --box-shadow-blur: 5px;
+  --box-shadow-spread: 1px;
+  --box-shadow-color: rgb(235, 235, 235);
+  --hoverbg: hsl(0, 80%, 50%);
+}
+.dark {
+  --bodybg: hsl(207, 26%, 17%);
+  --inputholder: #fff;
+  --btnbg: hsl(209, 23%, 22%);
+  --textColor: hsl(0, 0%, 100%);
+  --box-shadow-offset-x: 0px;
+  --box-shadow-offset-y: 0px;
+  --box-shadow-blur: 0px;
+  --box-shadow-spread: 0px;
+  --box-shadow-color: #000;
+  --hoverbg: hsl(0, 0%, 52%);
+}
+body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--bodybg);
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 7%;
+  background-color: var(--btnbg);
+  box-shadow: var(--box-shadow-offset-x) var(--box-shadow-offset-y)
+    var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
+}
+.header h1 {
+  font-weight: 800;
+  margin-left: 30px;
+  color: var(--textColor);
+}
+.rheader {
+  padding-top: 10px;
+  display: flex;
+  cursor: pointer;
+  margin-right: 30px;
+}
+.rheader p {
+  font-weight: 700;
+  margin-left: 5px;
+  color: var(--textColor);
+}
+.rheader .fa-moon {
+  margin-top: 2px;
+  color: var(--textColor);
+}
+.wrapper {
+  width: 100%;
+  padding: 0 7%;
+  height: auto;
+}
+.bars {
+  padding: 35px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 30px;
+}
+.bars .inputBar {
+  width: 46%;
+  display: flex;
+  position: relative;
+  height: 50px;
+}
+.inputBar label {
+  position: absolute;
+  visibility: hidden;
+}
+.inputBar .fa-search {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  color: var(--inputholder);
+}
+.inputBar input {
+  width: 100%;
+  border: none;
+  background-color: var(--btnbg);
+  box-shadow: var(--box-shadow-offset-x) var(--box-shadow-offset-y)
+    var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
+  padding-left: 50px;
+  border-radius: 5px;
+  color: var(--textColor);
+}
+.inputBar input,
+select:focus {
+  outline: transparent;
+}
+::placeholder {
+  color: var(--inputholder);
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+}
+.card {
+  cursor: pointer;
+  background-color: var(--btnbg);
+  height: auto;
+  box-shadow: var(--box-shadow-offset-x) var(--box-shadow-offset-y)
+    var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
+  border-radius: 6px;
+  width: calc(20% - 10px);
+  margin: 0 30px 40px 30px;
+  color: var(--textColor);
+}
+.flag {
+  width: 100%;
+  height: auto;
+}
+.card .flag img {
+  width: 100%;
+  border-radius: 6px 6px 0 0;
+  height: auto;
+}
+.CountryData {
+  padding: 20px;
+}
+.CountryData h3 {
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+.CountryData p {
+  font-size: 16px;
+  margin-bottom: 3px;
+  font-weight: 300;
+}
+/*---------details-------*/
+.backBtn {
+  position: relative;
+}
+.details {
+  margin: 0 30px;
+  padding-bottom: 60px;
+}
+.details .back {
+  margin: 50px 0;
+  padding: 7px 40px;
+  background-color: var(--btnbg);
+  box-shadow: var(--box-shadow-offset-x) var(--box-shadow-offset-y)
+    var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
+  border: none;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--textColor);
+}
+.fa-arrow-left {
+  position: absolute;
+  left: 20px;
+  top: 58px;
+  color: var(--textColor);
+}
+.data,
+.listdata {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.data img {
+  width: calc(40% - 10px);
+  height: 50vh;
+}
+.rdata {
+  width: 50%;
+}
+.rdata h2 {
+  font-weight: 900;
+  margin: 20px 0;
+  color: var(--textColor);
+}
+.listdata ul li {
+  list-style-type: none;
+  margin-bottom: 8px;
+  color: var(--textColor);
+  font-weight: 300;
+}
+.border {
+  margin-top: 45px;
+  display: flex;
+}
+.border p {
+  margin-right: 15px;
+  padding-bottom: 20px;
+  color: var(--textColor);
+}
+.border div button {
+  padding: 6px 15px;
+  background-color: var(--btnbg);
+  border: none;
+  box-shadow: var(--box-shadow-offset-x) var(--box-shadow-offset-y)
+    var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
+  margin: 0px 8px 10px 0px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--textColor);
+}
+.filter {
+  display: flex;
+  background-color: var(--btnbg);
+  padding: 14px 18px;
+  box-shadow: var(--box-shadow-offset-x) var(--box-shadow-offset-y)
+    var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
+  border-radius: 6px;
+  font-weight: 600;
+  position: relative;
+  width: 168px;
+}
+.filter p {
+  font-size: 13px;
+  color: var(--textColor);
+}
+.filter .fa-caret-down {
+  position: absolute;
+  cursor: pointer;
+  right: 18px;
+  color: var(--textColor);
+}
+.blocks {
+  margin-top: 4px;
+  box-shadow: var(--box-shadow-offset-x) var(--box-shadow-offset-y)
+    var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
+  background-color: var(--btnbg);
+  border-radius: 6px;
+  z-index: 2;
+  position: absolute;
+  width: 168px;
+}
+.blocks li {
+  list-style-type: none;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 5px 20px;
+  color: var(--textColor);
+}
+.blocks li:hover {
+  background-color: var(--hoverbg);
+  color: #fff;
+  box-shadow: 0 0 0 transparent;
+}
+.preload {
+  width: 100%;
+  height: 100%;
+  visibility: visible;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  visibility: visible;
+}
+.preload img {
+  width: 60px;
+  height: 60px;
+}
+.noData {
+  width: 100%;
+  margin: 10px 30px;
+}
+.noData div h1 {
+  color: var(--inputholder);
+  font-weight: 900;
+}
+.noData div {
+  color: var(--inputholder);
+}
+@media screen and (max-width: 1286px) {
+  .card {
+    width: calc(30% - 5px);
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .bars,
+  .rheader,
+  .details {
+    margin: 0;
+  }
+  .header h1 {
+    margin-left: 0;
+  }
+  .noData {
+    margin: 10px 0px;
+  }
+  .rdata {
+    width: 55%;
+  }
+}
+@media screen and (max-width: 980px) {
+  .card {
+    width: calc(50% - 20px);
+  }
+  .wrapper,
+  .header {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .data img {
+    width: 100%;
+    height: auto;
+  }
+  .rdata h2 {
+    margin: 40px 0 20px;
+  }
+  .listdata ul {
+    margin-bottom: 40px;
+  }
+  .border {
+    margin-top: 0;
+  }
+  .rdata {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 660px) {
+  .cards {
+    justify-content: center;
+  }
+  .bars .inputBar {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .header h1 {
+    font-size: 17px;
+  }
+  .rheader {
+    padding-top: 5px;
+  }
+  .rheader p {
+    font-size: 13px;
+  }
+  .card {
+    width: calc(90% - 30px);
+  }
+  .border {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 426px) {
+  .card {
+    width: calc(100% - 30px);
+  }
+}
+.hide {
+  visibility: hidden;
+  position: absolute;
+}
+.view {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
