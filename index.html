@@ -1,45 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rest Countries with theme switcher</title>
-    <link href="images/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
-    <link href="style.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/ae85a2a0e7.js" crossorigin="anonymous"></script>
-</head>
-<body class="light">
-   <div class="preload">
-        <img src="images/ZKZg.gif">
-   </div>
+    <link
+      href="images/favicon-32x32.png"
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/ae85a2a0e7.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-NQJGM6CJ");
+    </script>
+  </head>
+  <body class="light">
+    <div class="preload">
+      <img src="images/ZKZg.gif" />
+    </div>
     <div class="header">
-        <h1>Where in the world?</h1>
-        <div class="rheader">
-            <i class="far fa-moon"></i>
-            <p class="darkmode">Dark Mode</p>
-        </div>
+      <h1>Where in the world?</h1>
+      <div class="rheader">
+        <i class="far fa-moon"></i>
+        <p class="darkmode">Dark Mode</p>
+      </div>
     </div>
     <div class="wrapper">
-       <div class="bars">
-           <div class="inputBar">
-             <i class="fas fa-search"></i>
-             <input class="input" placeholder="Search for a country...">
-           </div>
-            <div class="rbar">
-                <div class="filter"><p>Filter by Region</p><i class="fas fa-caret-down"></i></div>
-                <ul class="blocks hide">
-                    <li class="hide">All</li>
-                    <li class="hide">Africa</li>
-                    <li class="hide">Americas</li>
-                    <li class="hide">Asia</li>
-                    <li class="hide">Europe</li>
-                    <li class="hide">Oceania</li>
-                </ul>
-            </div>
-       </div>
-       <div class="cards">
-       </div>
+      <div class="bars">
+        <div class="inputBar">
+          <i class="fas fa-search"></i>
+          <input class="input" placeholder="Search for a country..." />
+        </div>
+        <div class="rbar">
+          <div class="filter">
+            <p>Filter by Region</p>
+            <i class="fas fa-caret-down"></i>
+          </div>
+          <ul class="blocks hide">
+            <li class="hide">All</li>
+            <li class="hide">Africa</li>
+            <li class="hide">Americas</li>
+            <li class="hide">Asia</li>
+            <li class="hide">Europe</li>
+            <li class="hide">Oceania</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cards"></div>
     </div>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-NQJGM6CJ"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
