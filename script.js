@@ -28,10 +28,8 @@ filter.addEventListener("click", function (e) {
       list.classList.remove("hide");
       list.addEventListener("click", function (e) {
         region.textContent = e.target.textContent;
-        //cards.classList.add("hide");
         remove();
         if (region.textContent == "All") {
-          //cards.classList.remove("hide");
           fill();
           constrained(user);
         } else {
@@ -43,7 +41,6 @@ filter.addEventListener("click", function (e) {
           filteredCountries.forEach((country) => {
             displayCards(country);
           });
-          //cards.classList.remove("hide");
           constrained(filteredCountries);
         }
         ul.classList.add("hide");
@@ -109,8 +106,6 @@ function deatiled(element) {
   }
 
   const divs = document.createElement("div");
-  //divs.classList.add("div");
-  //body.classList.add("view");
   divs.innerHTML = `<div class="details">
     <div class="backBtn"><i class="fas fa-arrow-left"></i>
     <button class="back">Back</button></div>
@@ -141,7 +136,6 @@ function deatiled(element) {
 
   bars.classList.add("hide");
   cards.classList.add("hide");
-  //remove();
   wrapper.appendChild(divs);
 
   divs.addEventListener("click", function (e) {
@@ -150,10 +144,8 @@ function deatiled(element) {
       divs.remove();
       bars.classList.remove("hide");
       setTimeout(() => {
-        //fill();
         cards.classList.remove("hide");
         preload.classList.add("hide");
-        //body.classList.remove("view");
       }, 1000);
     }
   });
@@ -208,11 +200,9 @@ function constrained(filteredCountries) {
   inputBar.addEventListener("keyup", (e) => {
     if (e.target || e.key === "Backspace") {
       const searchCountry = e.target.value.toLowerCase();
-      //console.log(searchCountry);
       let constfilteredCountries = filteredCountries.filter((char) => {
         return char.name.toLowerCase().includes(searchCountry);
       });
-      //console.log(filteredCountries);
       remove();
       if (constfilteredCountries.length) {
         constfilteredCountries.forEach((elem) => {
